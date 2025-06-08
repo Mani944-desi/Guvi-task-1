@@ -1,0 +1,12 @@
+Networking Commands :---File Permission Task
+
+
+
+vagrant@ubuntu-bionic:~$ sudo chmod 764 /home/demo.txt
+vagrant@ubuntu-bionic:~$ ls -l /home/demo.txt
+-rwxrw-r-- 1 root root 0 Jun  8 10:40 /home/demo.txt
+vagrant@ubuntu-bionic:~$ chmod 777 /home/vegrant/demo.txt
+chmod: cannot access '/home/vegrant/demo.txt': No such file or directory
+vagrant@ubuntu-bionic:~$ sudo chmod 777 /home/demo.txt
+vagrant@ubuntu-bionic:~$ ls -l /home/demo.txt
+-rwxrwxrwx 1 root root 0 Jun  8 10:40 /home/demo.txt
