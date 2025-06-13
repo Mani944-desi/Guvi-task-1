@@ -1,0 +1,32 @@
+*********  Task- 1  ********
+
+vagrant@ubuntu-bionic:~$ nano Task.sh
+vagrant@ubuntu-bionic:~$ nano Task.sh
+vagrant@ubuntu-bionic:~$ cat Task.sh
+#!/bin/bash
+
+URL="https://www.guvi.in"
+
+status_code=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+
+echo "HTTP Status Code: $status_code"
+
+if [ "$status_code" -ge 200 ] && [ "$status_code" -lt 300 ]; then
+
+  echo "Website is working fine (Success)"
+
+else
+
+  echo "Website is not reachable or returned error (Failure)"
+
+fi
+
+
+vagrant@ubuntu-bionic:~$ chmod +x Task.sh
+vagrant@ubuntu-bionic:~$ ./Task.sh
+HTTP Status Code: 200
+Website is working fine (Success)
+
+###############################################################################################################################################################################################
+
+****************  Task-2 ********************************
