@@ -1,0 +1,26 @@
+vagrant@ubuntu-bionic:~$ mkdir MY_FOLDER
+vagrant@ubuntu-bionic:~$ cd MY_FOLDER
+vagrant@ubuntu-bionic:~/MY_FOLDER$ echo "This is the content of my_file.txt" > my_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ echo "This is the conetent of another_file.txt" > another_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ echo "This is the content of another_file.txt" > another_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ cat another_file.txt >> my_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$
+vagrant@ubuntu-bionic:~/MY_FOLDER$ echo "updated content of my_file.txt:"
+updated content of my_file.txt:
+vagrant@ubuntu-bionic:~/MY_FOLDER$ cat my_file.txt
+This is the content of my_file.txt
+This is the content of another_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -lrt
+total 8
+-rw-rw-r-- 1 vagrant vagrant 40 Jul 23 07:11 another_file.txt
+-rw-rw-r-- 1 vagrant vagrant 75 Jul 23 07:15 my_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -lart
+total 16
+drwxr-xr-x 6 vagrant vagrant 4096 Jul 23 07:06 ..
+drwxrwxr-x 2 vagrant vagrant 4096 Jul 23 07:11 .
+-rw-rw-r-- 1 vagrant vagrant   40 Jul 23 07:11 another_file.txt
+-rw-rw-r-- 1 vagrant vagrant   75 Jul 23 07:15 my_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -lh
+total 8.0K
+-rw-rw-r-- 1 vagrant vagrant 40 Jul 23 07:11 another_file.txt
+-rw-rw-r-- 1 vagrant vagrant 75 Jul 23 07:15 my_file.txt
