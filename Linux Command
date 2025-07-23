@@ -24,3 +24,75 @@ vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -lh
 total 8.0K
 -rw-rw-r-- 1 vagrant vagrant 40 Jul 23 07:11 another_file.txt
 -rw-rw-r-- 1 vagrant vagrant 75 Jul 23 07:15 my_file.txt
+
+
+
+#################################################################################################  TASK-2  #########################################################################################################
+
+vagrant@ubuntu-bionic:~/MY_FOLDER$ touch file1.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ touch file2.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ touch file3.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ for i in {4..20}; do touch "file_$i.txt";done
+vagrant@ubuntu-bionic:~/MY_FOLDER$
+vagrant@ubuntu-bionic:~/MY_FOLDER$
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -lrt
+total 8
+-rw-rw-r-- 1 vagrant vagrant 40 Jul 23 07:11 another_file.txt
+-rw-rw-r-- 1 vagrant vagrant 75 Jul 23 07:15 my_file.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file1.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file2.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file3.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_5.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_4.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_8.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_7.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_6.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_9.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_10.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_12.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_11.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_16.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_15.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_14.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_13.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_20.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_19.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_18.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_17.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file1.txt file1.yml
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file2.txt file2.yml
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file3.txt file3.yml
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file4.txt file4.yml
+mv: cannot stat 'file4.txt': No such file or directory
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file_4.txt file_4.yml
+vagrant@ubuntu-bionic:~/MY_FOLDER$ mv file_5.txt file_5.yml
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls -l
+total 8
+-rw-rw-r-- 1 vagrant vagrant 40 Jul 23 07:11 another_file.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file1.yml
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file2.yml
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:36 file3.yml
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_10.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_11.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_12.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_13.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_14.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_15.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_16.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_17.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_18.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_19.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_20.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_4.yml
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_5.yml
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_6.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_7.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_8.txt
+-rw-rw-r-- 1 vagrant vagrant  0 Jul 23 07:38 file_9.txt
+-rw-rw-r-- 1 vagrant vagrant 75 Jul 23 07:15 my_file.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls *.txt
+another_file.txt  file_11.txt  file_13.txt  file_15.txt  file_17.txt  file_19.txt  file_6.txt  file_8.txt  my_file.txt
+file_10.txt       file_12.txt  file_14.txt  file_16.txt  file_18.txt  file_20.txt  file_7.txt  file_9.txt
+vagrant@ubuntu-bionic:~/MY_FOLDER$ ls *.yml
+file1.yml  file2.yml  file3.yml  file_4.yml  file_5.yml
+
